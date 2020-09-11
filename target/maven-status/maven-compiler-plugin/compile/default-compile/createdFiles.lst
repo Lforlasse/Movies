@@ -3,6 +3,7 @@ rest\TestResource.class
 facades\MovieFacade.class
 rest\ApplicationConfig.class
 entities\ghy636765\Movie_.class
+facades\Main.class
 rest\MovieResource.class
 entities\Movie.class
 utils\EMF_Creator.class

@@ -111,20 +111,20 @@ public class MovieFacade {
         return new MovieDTO(movie);
     }
 
-    public static void main(String[] args) {
-        //Create emf pointing to the dev-database
-        EntityManagerFactory emf = EMF_Creator.createEntityManagerFactory();
-
-        EntityManager em = emf.createEntityManager();
-        try {
-            em.getTransaction().begin();
-            em.createQuery("DELETE from Movie").executeUpdate();
-            em.persist(new Movie(2002, "Harry Potter and the Chamber of Secrets", new String[]{"Daniel Radcliffe", "Emma Watson", "Alan Rickman", "Rupert Grint"}));
-            em.persist(new Movie(2001, "Harry Potter and the Philosopher's Stone", new String[]{"Daniel Radcliffe", "Emma Watson", "Alan Rickman", "Rupert Grint"}));
-            em.persist(new Movie(2019, "Once Upon a Time... in Hollywood", new String[]{"Leonardo DiCaprio", "Brad Pitt", "Margot Robbie"}));
-            em.getTransaction().commit();
-        } finally {
-            em.close();
-        }
-    }
+//    public static void main(String[] args) {
+//        //Create emf pointing to the dev-database
+//        EntityManagerFactory emf = EMF_Creator.createEntityManagerFactory();
+//
+//        EntityManager em = emf.createEntityManager();
+//        try {
+//            em.getTransaction().begin();
+//            em.createQuery("DELETE from Movie").executeUpdate();
+//            em.persist(new Movie(2002, "Harry Potter and the Chamber of Secrets", new String[]{"Daniel Radcliffe", "Emma Watson", "Alan Rickman", "Rupert Grint"}));
+//            em.persist(new Movie(2001, "Harry Potter and the Philosopher's Stone", new String[]{"Daniel Radcliffe", "Emma Watson", "Alan Rickman", "Rupert Grint"}));
+//            em.persist(new Movie(2019, "Once Upon a Time... in Hollywood", new String[]{"Leonardo DiCaprio", "Brad Pitt", "Margot Robbie"}));
+//            em.getTransaction().commit();
+//        } finally {
+//            em.close();
+//        }
+//    }
 }
